@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
 
       ## ------- Method 5 ------- :
       ## 2 Table Full Text Search (with partial matching) with pg_search gem, class method defined in app/models/movie.rb
-      # @movies = Movie.global_search(query)
+      @movies = Movie.global_search(query)
     else
       # if no query available to be searched with get all Movies as usual
       @movies = Movie.all
